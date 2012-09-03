@@ -1,0 +1,81 @@
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+	background-color:#F2F2F2;
+}
+h1{
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: bold;
+}
+h1 small{
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 1;
+	color: #999;
+}
+p{
+	margin: 0 0 10px;
+}
+
+.container{
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0px 10px 0px 10px;
+}
+.block50{
+	width:50%;
+	float: left;
+}
+.center{
+	text-align:center;
+}
+
+ul.nav li{
+	display:inline-block;
+	line-height: 20px;
+}
+ul.nav li a{
+	padding: 10px 15px 10px;
+	display:block;
+	color:#999;
+	text-decoration:none;
+}
+ul.nav li a.current{
+	color:#000;
+}
+ul.nav li a:hover,
+ul.nav li a:focus{
+	color:#000;
+	text-decoration:none;
+}
+#navbar{
+	clear: both;
+	overflow: auto;
+	background-color: #000;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	
+	min-height: 40px;
+	background-color: #FAFAFA;
+	border: 1px solid #D4D4D4;
+	border-radius: 4px;
+}
+
+
+
+#navbar.fixed{
+	width:100%;
+	position: fixed;
+	top: 0;
+	left:0;
+	border-radius: 0px;
+	box-shadow: 0px 4px 17px -4px black;
+	border: 0;
+}
+#navbar.fixed + * {
+	padding-top: 40px;
+}

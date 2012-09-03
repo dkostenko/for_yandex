@@ -1,0 +1,123 @@
+﻿<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <title>Костенко Дмитрий для Yandex</title>  
+  <meta name="description" content="The HTML5 Herald">  
+  <meta name="author" content="SitePoint">
+	<link rel="stylesheet" href="css/reset.css">  
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if IE]>  
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+  <![endif]-->  
+</head>  
+<body>
+	<div class="container">
+		<header>
+			<h1>Костенко Дмитрий Владимирович <small>Москва</small></h1>
+			<div class='block50 center'>
+				<img src="img/iam.jpg" width=150>
+			</div>
+			<div class='block50 center'>
+				<p><a href="mailto:kostenko.market@gmail.com">kostenko.market@gmail.com</a></p>
+				<p>+7 (916) 990 85 91</p>
+				<p>18.02.1992</p>
+			</div>
+		</header>
+		<div id="navbar">
+			<div class="container">
+			<ul class="nav">
+				<li><a href="#general" class="link">Общие вопросы</a></li>
+				<li><a href="#exp" class="link">Опыт разработки</a></li>
+				<li><a href="#">Задания</a></li>
+			</ul>
+			</div>
+		</div>
+	
+
+		<div class='row'>
+			<section id='general'>				
+				<p>Вуз, факультет, специальность, кафедра</p>
+				<p>НИУ-ВШЭ, факультет бизнес-информатики, отделение Программной инженерии, кафедра Управдение разработкой программного обеспечения</p>
+				<p>Год окончания вуза</p>
+				<p>2013</p>
+				<p>На каком уровне владеете английским языком?</p>
+				<p>Владею английским на уровне Intermediate</p>
+				<p>Чего вы ожидаете от участия в Школе?</p>
+				<p> Уверен, что могу многому научится в этой школе!</p>
+				<p>Откуда вы о нас узнали?</p>
+				<p>Узнал от друга6 который узнал о вас из Твиттера</p>
+				<p>Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</p>
+				<p>Готов тратить на стажировку и работу в компании 5 дней в неделю.</p>
+				<hr />
+			</section>
+		
+		
+			<section id='exp'>				
+				<p>Расскажите нам о вашем опыте разработки. Ничего не упускайте: это может быть как серьезный интерфейс, так и просто домашняя страничка.</p>
+				
+				<p>Создание интернет-магазинов и презентационных сайтов для малых бизнесов на движке WordPress, Joomla, с помощью фреймворков Yii и Ruby on Rails.</p>
+				
+				<p>Какие языки программирования, фреймворки и технологии вы использовали? Сложились ли у вас личные предпочтения?</p>
+				
+				<p>Yii, Ruby on Rails, javascript, jQuery, Twitter Bootstrap, Kube (http://kubeframework.com/). Предпочитаю связку Ruby on Rails, javascript и Twitter Bootstrap. Предпочитаю язык Ruby в связи с его гибкостью и удобным синтаксисом.</p>
+				
+				<p>Какие редакторы и среды разработки вы использовали? Чем обычно пользуетесь?</p>
+				
+				<p>Textmate, ранее notepad++ и dreamweaver</p>
+				
+				<p>С какими ОС приходилось сталкиваться? Для каких целей вы их использовали?</p>
+				
+				<p>Сначала с Windows (98, 2000, xp, vista, 7). На сегодняшний день Mac OS.</p>
+				
+				<p>Приходилось ли вам пользоваться системами контроля версий? Если да, то какими? Какая из них вам нравится больше всего?</p>
+				
+				<p>Я использую в работе git, меня устраивает.</p>
+				
+				<p>Использовали ли вы системы постановки и ведения задач?</p>
+				
+				<p>Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать?</p>
+				
+				<p>http://css-tricks.com/ http://habrahabr.ru/ http://www.deviantart.com/</p>
+				
+				<p>Работали ли вы где-нибудь? Какие у вас были должностные обязанности? Есть ли опыт работы в команде?</p>
+				
+				<p>Да, работал. Создание сайтов. Опыт работы в команде (3 человека, включая меня) есть.</p>
+				
+				<hr />
+			</section>
+		</div>
+	</div>
+
+	
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+  <script type="text/javascript">
+		$(document).ready(function() {
+			$('#navbar').scrollMenu({
+				min: $('#navbar').offset().top,
+				onEnter: function(element, position) {
+					$("#navbar").addClass('fixed');
+				},
+				onLeave: function(element, position) {
+					$("#navbar").removeClass('fixed');
+				}
+			});
+			
+			$('section').each(function(i) {
+				var position = $(this).position();
+				$(this).scrollMenu({
+					min: position.top,
+					max: position.top + $(this).height(),
+					onEnter: function(element, position) {
+						$('.link').removeClass('current');
+						$("a[href$=#"+element.id+"]").addClass('current');
+					},
+				});
+			});
+		});
+	</script>
+</body>  
+</html>
