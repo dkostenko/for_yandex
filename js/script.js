@@ -1,10 +1,10 @@
 jQuery.fn.scrollMenu = function (options){			
 	var options = jQuery.extend({
-		container: window,
-		min: 0,
-		max: 0,
-		onEnter: options.onEnter ? options.onEnter : [],
-		onLeave: options.onLeave ? options.onLeave : [],
+	container: window,
+	min: 0,
+	max: 0,
+	onEnter: options.onEnter ? options.onEnter : [],
+	onLeave: options.onLeave ? options.onLeave : [],
 	},options);
 
 	return this.each(function () {
@@ -30,7 +30,6 @@ jQuery.fn.scrollMenu = function (options){
 				if(inside){
 					inside = false;
 					jQuery(element).trigger('scrollLeave', {position: position})
-
 					if(jQuery.isFunction(o.onLeave)){
 						o.onLeave(element, position);
 					}
